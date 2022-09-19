@@ -1,0 +1,15 @@
+@mixin button ($color1, $color2) {
+  text-align: center;
+  width: 30%;
+  margin: 15px auto;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  color: #e0f3f5;
+  background-color: $color1;
+  border: 0;
+  cursor: pointer;
+  &:hover{
+    background-color: $color2;
+  }
+}

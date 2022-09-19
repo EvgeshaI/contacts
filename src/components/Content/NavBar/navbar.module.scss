@@ -1,0 +1,29 @@
+.navbarContainer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.authBlock{
+  display: flex;
+}
+.block{
+  display: flex;
+  align-items: center;
+  padding: 5px 7px;
+  margin: 0 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: #e0f3f5;
+  fill: #e0f3f5;
+  background-color: #3db3c0;
+  &:hover{
+    background-color: #76cad3;
+  }
+}
+.icon{
+  display: flex;
+  width: 30px;
+  margin: 0 10px 0 0;
+}

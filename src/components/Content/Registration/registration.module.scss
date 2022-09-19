@@ -1,0 +1,41 @@
+@import "../common.module";
+@mixin input ($color) {
+  width: 50%;
+  padding: 10px;
+  font-size: 15px;
+  display: flex;
+  margin: 10px auto;
+  border-radius: 10px;
+  border: 1px solid $color;
+  outline: none;
+  background: none;
+  text-align: center;
+}
+
+.registrationContainer{
+  width: 40%;
+  margin: 10px auto;
+  justify-content: center;
+}
+.header{
+  margin: 70px 0 0 0;
+  font-size: 20px;
+  text-align: center;
+}
+.formButtonBox {
+  display: flex;
+}
+.form input {
+  @include input(grey)
+}
+.formError input {
+  @include input(darkred)
+}
+.formButton {
+  @include button (#3db3c0, #76cad3);
+}
+.errorMessage{
+  font-size: 12px;
+  text-align: center;
+  color: darkred;
+}

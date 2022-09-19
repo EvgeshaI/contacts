@@ -1,0 +1,84 @@
+@import "../../common.module";
+@mixin textStyle {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.contactsContainer{
+  width: 50%;
+  margin: 20px auto;
+}
+.header{
+  @include textStyle;
+  color: #3db3c0;
+  font-size: 25px;
+  font-weight: bold;
+}
+.warning{
+  @include textStyle;
+  font-size: 20px;
+}
+
+.addContact{
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+}
+.icon{
+  width: 30px;
+  margin: 0 10px 0 0;
+  fill: #3db3c0;
+}
+
+.createContainer{
+  width: 40%;
+  margin: 10px auto;
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 10px;
+}
+.createContainer > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px 0;
+  input{
+    padding: 5px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    outline: none;
+  }
+}
+.checkboxes > label{
+  margin: 0 10px 0 0;
+  > input{
+    margin: 0 5px;
+  }
+}
+.saveButton{
+  @include button (#3db3c0, #76cad3);
+  margin: 10px auto 5px;
+}
+
+
+.contactContainer{
+  display: flex;
+  margin: 10px auto;
+  width: 40%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding: 10px;
+}
+.avatar{
+  width: 50px;
+}
+
+.info{
+  margin: 0  0 0 10px;
+  >div{
+    margin: 5px;
+  }
+}
