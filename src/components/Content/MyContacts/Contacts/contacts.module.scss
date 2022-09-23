@@ -3,6 +3,16 @@
   text-align: center;
   margin: 20px 0;
 }
+@mixin displayStyle ($position) {
+  display: flex;
+  justify-content: $position;
+}
+@mixin inputStyle ($padding){
+  padding: $padding;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid gray;
+}
 
 .contactsContainer{
   width: 50%;
@@ -18,12 +28,24 @@
   @include textStyle;
   font-size: 20px;
 }
-
+.search{
+  @include displayStyle(center);
+  align-items: center;
+  margin: 0 auto 20px;
+  input{
+    width: 40%;
+    @include inputStyle(5px)
+  }
+}
+.searchIcon{
+  width: 20px;
+  margin: 0 0 0 10px;
+  cursor: pointer;
+}
 .addContact{
-  display: flex;
+  @include displayStyle(center);
   cursor: pointer;
   align-items: center;
-  justify-content: center;
 }
 .icon{
   width: 30px;
@@ -37,19 +59,18 @@
   padding: 10px;
   border: 1px solid gray;
   border-radius: 10px;
-}
-.createContainer > div {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: 10px 0;
-  input{
-    padding: 5px;
-    border-radius: 6px;
-    border: 1px solid gray;
-    outline: none;
+  > div {
+    @include displayStyle(space-between);
+    align-items: center;
+    margin: 10px 0;
+    input{
+      @include inputStyle(5px);
+      border-radius: 6px;
+      border: 1px solid gray;
+    }
   }
 }
+
 .checkboxes > label{
   margin: 0 10px 0 0;
   > input{
@@ -61,24 +82,48 @@
   margin: 10px auto 5px;
 }
 
-
 .contactContainer{
-  display: flex;
   margin: 10px auto;
-  width: 40%;
-  align-items: center;
-  justify-content: center;
+  width: 50%;
   border: 1px solid gray;
   border-radius: 10px;
   padding: 10px;
 }
-.avatar{
-  width: 50px;
+.createIcons{
+  @include displayStyle(space-between);
+  cursor: pointer;
+  svg{
+    width: 20px;
+  }
+  :hover{
+    fill: #3db3c0;
+  }
+}
+.contactInfo{
+  @include displayStyle(stretch);
+  align-items: center;
+}
+.avatar {
+  margin: 0 0 0 10px;
+  svg{
+    width: 50px;
+  }
 }
 
 .info{
   margin: 0  0 0 10px;
+  text-align: left;
   >div{
     margin: 5px;
   }
+  input{
+    @include inputStyle(3px);
+    border: 1px solid gray;
+    border-radius: 7px;
+    margin: 0 0 0 5px;
+  }
+}
+
+.field{
+  @include displayStyle(space-between);
 }

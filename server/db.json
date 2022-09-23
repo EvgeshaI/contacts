@@ -1,0 +1,18 @@
+{
+  "accounts": [
+    {
+      "id": 1,
+      "email": "email@email.ru",
+      "password": "password"
+    }
+  ],
+  "contacts": [
+    {
+      "name": "Test",
+      "gender": "male",
+      "email": "test@test.ru",
+      "phone": "123456789",
+      "id": 1
+    }
+  ]
+}
